@@ -36,14 +36,14 @@ def analyse_colors(filepath):
     temp_image = cv2.resize(temp_image, dsize=(width * 2, height))
     image=temp_image
     x_position = width // 2
-    y_position=30
-    next_segment=90
+    y_position=20
+    next_segment=88
     average_strip_color_list=[]
     for i in range(10):
         segment = image[y_position-10:y_position, x_position-10:x_position +10]
         average_segment_color = np.mean(segment, axis=(0, 1))
         average_segment_color = average_segment_color.astype(int)
-        print(f"Average color: B={average_segment_color[0]}, G={average_segment_color[1]}, R={average_segment_color[2]}")
+        print(f"Average color: R={average_segment_color[2]}, G={average_segment_color[1]},  B={average_segment_color[0]}")
         average_strip_color_list.append(average_segment_color)
         y_position+=next_segment
     
@@ -62,7 +62,7 @@ def analyse_colors(filepath):
 
 
 
-filepath = 'image1.jpg'
+filepath = 'images/image6.jpg'
 colors=analyse_colors(filepath)
 
 
