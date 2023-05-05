@@ -29,11 +29,26 @@ def analyse_colors(filepath):
     temp_image = cv2.resize(temp_image, dsize=(width * 2, height))
     image=temp_image
 
-    
+    x_position = width // 2
+    y_position=50
+    next_segment=92
 
-    cv2.imshow("Interested Area", image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    for i in range(10):
+        segment = image[y_position:y_position + 10, x_position:x_position + 10]
+        avg_color_list=[]
+        average_color = np.mean(segment, axis=(0, 1))
+        average_color = average_color.astype(int)
+        # print(average_color)
+        # Print the average color
+        print(f"Average color: B={average_color[0]}, G={average_color[1]}, R={average_color[2]}")
+        avg_color_list.append(average_color)
+        y_position+=next_segment
+        
+
+
+    # cv2.imshow("Interested Area", image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
 
     return 
 
