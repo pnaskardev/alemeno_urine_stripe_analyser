@@ -1,1 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+# FRONT-END IGNORE FILES
+frontend/image-upload-app/node_modules
+frontend/image-upload-app/.pnp
+frontend/image-upload-app/.pnp.js
+
+# testing
+frontend/image-upload-app/coverage
+
+# production
+frontend/image-upload-app/build
+
+# misc
+frontend/image-upload-app.DS_Store
+frontend/image-upload-app.env.local
+frontend/image-upload-app.env.development.local
+frontend/image-upload-app.env.test.local
+frontend/image-upload-app.env.production.local
+
+frontend/image-upload-app/npm-debug.log*
+frontend/image-upload-app/yarn-debug.log*
+frontend/image-upload-app/yarn-error.log*
+
+
+
 example.py
