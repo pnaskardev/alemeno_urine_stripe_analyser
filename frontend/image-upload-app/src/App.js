@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useDropzone } from 'react-dropzone';
 
+import "./App.css";
+
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -28,21 +30,26 @@ function App() {
   };
 
   return (
-    <center>
-      <div>
-        <div {...getRootProps({ className: 'dropzone' })}>
-          <input {...getInputProps()} />
-          {selectedImage ? (
-            <img src={selectedImage} alt="Selected" className="image-preview" />
-          ) : (
-            <p>Drag and drop an image here, or click to select</p>
-          )}
-        </div>
-        <button onClick={handleUpload} disabled={!selectedImage}>
-          Upload Image
-        </button>
-    </div>
-    </center>
+    <html>
+      <h1><center>Urine Image analysis</center></h1>
+      <body>
+        <center>
+          <div>
+            <div {...getRootProps({ className: 'dropzone' })}>
+              <input {...getInputProps()} />
+              {selectedImage ? (
+                <img src={selectedImage} alt="Selected" className="image-preview" />
+              ) : (
+                <p>Drag and drop an image here, or click to select</p>
+              )}
+            </div>
+            <button onClick={handleUpload} disabled={!selectedImage}>
+              Upload Image
+            </button>
+          </div>
+        </center>
+      </body>
+    </html>
   );
 }
 
