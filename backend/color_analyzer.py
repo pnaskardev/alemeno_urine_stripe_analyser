@@ -7,7 +7,6 @@ async def analyse_colors(filepath):
     image = cv2.imread(filepath)
 
     interested_image=None
-    analysed_list=[]
 
     # I am trying to isolate the whole image by cropping the image 
     temp_image=image[50:1000, 150:170]
