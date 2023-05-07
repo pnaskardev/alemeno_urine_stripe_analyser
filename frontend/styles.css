@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+body {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+
 .drop-zone {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+	margin: auto;
+	width: 50%;
+	border: 3px solid green;
+	padding: 10px;
 	max-width: 200px;
 	height: 200px;
 	padding: 25px;
@@ -50,22 +58,32 @@
 	text-align: center;
 }
 
-.submit-btn
-{
-    display: block;
-    margin: 0 auto;
+
+.submit-btn {
+	display: block;
+	margin: 0 auto;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 10%;
 }
 
-#warning-message 
-{
+.submit-btn:hover {
+	background-color: #3e8e41;
+}
+
+#warning-message {
 	background-color: #ffe6e6;
 	color: #ff0000;
-  	border: 1px solid #ff0000;
+	border: 1px solid #ff0000;
 	padding: 10px;
 	border-radius: 5px;
 	margin: 10px auto;
 	max-width: 50%;
 	text-align: center;
 }
-  
-  

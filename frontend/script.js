@@ -118,16 +118,16 @@ function submitForm() {
       responseContainer.style.flexWrap = "wrap";
       responseContainer.style.marginTop = "20px";
       responseContainer.querySelectorAll("label").forEach((label) => {
-        label.style.flex = "1 0 100%";
+        label.style.flex = "1 2 100%";
         label.style.marginRight = "10px";
-        label.style.fontSize = "14px";
+        label.style.fontSize = "18px";
         label.style.fontWeight = "bold";
         label.style.textAlign = "center";
       });
 
       responseContainer.querySelectorAll("span").forEach((value) => {
-        value.style.flex = "1 0 70%";
-        value.style.fontSize = "14px";
+        value.style.flex = "2 2 90%";
+        value.style.fontSize = "18px";
       });
 
     })
