@@ -6,8 +6,7 @@ def create_shade_card(height, width, color):
     card[:] = color
     return card
 
-def analyse_colors(filepath):
-
+async def analyse_colors(filepath):
 
     # extract the given image
     image = cv2.imread(filepath)
@@ -49,24 +48,14 @@ def analyse_colors(filepath):
     
 
     bars = []
-
+    rgb_values=[]
     # for i in enumerate(average_strip_color_list):
     for i,color_value in enumerate(average_strip_color_list):
         bar = create_shade_card(200,100,color_value)
         padding = create_shade_card(200,5,[0, 0, 0])
         bars.append(bar)
         bars.append(padding)
+        rgb_values.append(color_value.tolist())
 
     final_analysed_colors = np.hstack(bars)
-    return final_analysed_colors
-
-
-
-filepath = 'images/image6.jpg'
-colors=analyse_colors(filepath)
-
-
-# Display the color bars image
-cv2.imshow("Colors", colors)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    return rgb_values

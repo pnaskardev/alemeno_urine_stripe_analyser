@@ -4,7 +4,6 @@
         <title>Drag and Drop File Upload</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <!-- <link rel="shortcut icon" href="/assets/favicon.ico"> -->
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
@@ -13,10 +12,11 @@
             <input type="file" name="myFile" class="drop-zone__input">
         </div>
         <br>
-        <button class="submit-btn" onclick="callAPI()">Submit</button>
-    
-        <script src="./script.js"></script>
+        <button class="submit-btn" onclick="submitForm()">Submit</button>
         <br>
         <div id="api-response"></div>
+        <div id="warning-message" style="display: none;">Please upload a file before submitting</div>
+        <script src="./script.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>

@@ -55,3 +55,17 @@
     display: block;
     margin: 0 auto;
 }
+
+#warning-message 
+{
+	background-color: #ffe6e6;
+	color: #ff0000;
+  	border: 1px solid #ff0000;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px auto;
+	max-width: 50%;
+	text-align: center;
+}
+  
+  
